@@ -203,8 +203,21 @@ export default function App() {
 
         <div style={card}>
           <button onClick={()=>setScreen("quiz")} style={{ width:"100%", padding:"16px", background:grad, color:"#fff", borderRadius:16, border:"none", fontSize:17, fontWeight:800, fontFamily:"'M PLUS Rounded 1c',sans-serif", boxShadow:`0 4px 0 ${accentDark}`, cursor:"pointer", marginBottom:20, display:"block" }}>🚀 診断スタート</button>
-          <div style={{ background:accentBg, borderRadius:12, padding:"12px 14px", marginBottom:16, fontSize:13, color:accentDark, lineHeight:1.7 }}>💡 所要時間は約<b>12分</b>。タップするだけで自動で次へ進みます！</div>
-          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+          <div
+  style={{
+    background:accentBg,
+    borderRadius:12,
+    padding:"12px 14px",
+    marginBottom:16,
+    fontSize:13,
+    color:accentDark,
+    lineHeight:1.7
+  }}
+>
+  ⚡ 30秒で診断開始できます
+  <br />
+  💡 所要時間は約<b>12分</b>。タップするだけで自動で次へ進みます！
+</div>
             {[["🏠","耐震・構造","3問"],["🪨","基礎・地盤","3問"],["🔧","設備・インフラ","3問"],["🌊","水害・浸水","3問"],["💰","売却・資産価値","3問"],["💴","家計・住居費","3問"],["🤝","近隣コミュニティ","3問"],["🚶","住む人の自立力","3問"],["🏗️","街の維持力","3問"]].map(([em,lb,ct])=>(
               <div key={lb} style={{ display:"flex", justifyContent:"space-between", alignItems:"center", background:accentBg, borderRadius:12, border:`1.5px dashed ${accentBorder}`, padding:"9px 14px" }}>
                 <span style={{ fontSize:13, color:"#374151" }}>{em} {lb}</span>
