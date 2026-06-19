@@ -411,13 +411,40 @@ export default function App() {
             ))}
             <div style={{ marginTop:10, fontSize:12, color:"#d1d5db", fontFamily:"'M PLUS Rounded 1c',sans-serif", lineHeight:1.7 }}>を詳しく分析します。</div>
           </div>
-          <a href={LINE_URL} target="_blank" rel="noopener noreferrer" style={{ display:"block", width:"100%", padding:"15px", background:"linear-gradient(135deg,#f59e0b,#ef4444)", color:"#fff", borderRadius:14, fontSize:16, fontWeight:800, fontFamily:"'M PLUS Rounded 1c',sans-serif", boxShadow:"0 3px 0 #92400e", cursor:"pointer", textDecoration:"none", textAlign:"center" }}>
-            🔎 プロ代行診断の内容を見てみる
-          </a>
-          <div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:6, marginTop:12, background:"#f3f4f6", borderRadius:10, padding:"9px 14px" }}>
-            <span style={{ fontSize:16 }}>💬</span>
-            <span style={{ fontSize:13, color:"#374151", fontWeight:700, fontFamily:"'M PLUS Rounded 1c',sans-serif" }}>LINEお友だちから <span style={{ background:"#fef9c3", padding:"1px 6px", borderRadius:4 }}>「代行」</span> と送ってください</span>
-          </div>
+         <a
+  href={LINE_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display:"block",
+    width:"100%",
+    padding:"16px",
+    background:"linear-gradient(135deg,#06C755,#00A040)",
+    color:"#fff",
+    borderRadius:14,
+    fontSize:17,
+    fontWeight:800,
+    fontFamily:"'M PLUS Rounded 1c',sans-serif",
+    boxShadow:"0 3px 0 #027A30",
+    cursor:"pointer",
+    textDecoration:"none",
+    textAlign:"center"
+  }}
+>
+  📱 LINEで「代行」と送って詳細を見る
+</a>
+
+<div
+  style={{
+    textAlign:"center",
+    marginTop:10,
+    fontSize:12,
+    color:"#d1d5db",
+    fontFamily:"'M PLUS Rounded 1c',sans-serif"
+  }}
+>
+  ※友だち追加後、「代行」と送信してください
+</div> 
         </div>
 
         <button onClick={restart} style={{ width:"100%", maxWidth:540, padding:"12px", background:"#fff", color:accent, borderRadius:14, border:`2px solid ${accentBorder}`, fontSize:14, fontWeight:700, fontFamily:"'M PLUS Rounded 1c',sans-serif", cursor:"pointer" }}>🔄 もう一度診断する</button>
