@@ -203,21 +203,8 @@ export default function App() {
 
         <div style={card}>
           <button onClick={()=>setScreen("quiz")} style={{ width:"100%", padding:"16px", background:grad, color:"#fff", borderRadius:16, border:"none", fontSize:17, fontWeight:800, fontFamily:"'M PLUS Rounded 1c',sans-serif", boxShadow:`0 4px 0 ${accentDark}`, cursor:"pointer", marginBottom:20, display:"block" }}>🚀 診断スタート</button>
-          <div
-  style={{
-    background:accentBg,
-    borderRadius:12,
-    padding:"12px 14px",
-    marginBottom:16,
-    fontSize:13,
-    color:accentDark,
-    lineHeight:1.7
-  }}
->
-  ⚡ 30秒で診断開始できます
-  <br />
-  💡 所要時間は約<b>12分</b>。タップするだけで自動で次へ進みます！
-</div>
+          <div style={{ background:accentBg, borderRadius:12, padding:"12px 14px", marginBottom:16, fontSize:13, color:accentDark, lineHeight:1.7 }}>💡 所要時間は<b>30秒から約10分</b>。タップするだけで自動で次へ進みます！</div>
+          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
             {[["🏠","耐震・構造","3問"],["🪨","基礎・地盤","3問"],["🔧","設備・インフラ","3問"],["🌊","水害・浸水","3問"],["💰","売却・資産価値","3問"],["💴","家計・住居費","3問"],["🤝","近隣コミュニティ","3問"],["🚶","住む人の自立力","3問"],["🏗️","街の維持力","3問"]].map(([em,lb,ct])=>(
               <div key={lb} style={{ display:"flex", justifyContent:"space-between", alignItems:"center", background:accentBg, borderRadius:12, border:`1.5px dashed ${accentBorder}`, padding:"9px 14px" }}>
                 <span style={{ fontSize:13, color:"#374151" }}>{em} {lb}</span>
@@ -424,40 +411,13 @@ export default function App() {
             ))}
             <div style={{ marginTop:10, fontSize:12, color:"#d1d5db", fontFamily:"'M PLUS Rounded 1c',sans-serif", lineHeight:1.7 }}>を詳しく分析します。</div>
           </div>
-         <a
-  href={LINE_URL}
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    display:"block",
-    width:"100%",
-    padding:"16px",
-    background:"linear-gradient(135deg,#06C755,#00A040)",
-    color:"#fff",
-    borderRadius:14,
-    fontSize:17,
-    fontWeight:800,
-    fontFamily:"'M PLUS Rounded 1c',sans-serif",
-    boxShadow:"0 3px 0 #027A30",
-    cursor:"pointer",
-    textDecoration:"none",
-    textAlign:"center"
-  }}
->
-  📱 LINEで「代行」と送って詳細を見る
-</a>
-
-<div
-  style={{
-    textAlign:"center",
-    marginTop:10,
-    fontSize:12,
-    color:"#d1d5db",
-    fontFamily:"'M PLUS Rounded 1c',sans-serif"
-  }}
->
-  ※友だち追加後、「代行」と送信してください
-</div> 
+          <a href={LINE_URL} target="_blank" rel="noopener noreferrer" style={{ display:"block", width:"100%", padding:"15px", background:"linear-gradient(135deg,#f59e0b,#ef4444)", color:"#fff", borderRadius:14, fontSize:16, fontWeight:800, fontFamily:"'M PLUS Rounded 1c',sans-serif", boxShadow:"0 3px 0 #92400e", cursor:"pointer", textDecoration:"none", textAlign:"center" }}>
+            🔎 プロ代行診断の内容を見てみる
+          </a>
+          <div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:6, marginTop:12, background:"#f3f4f6", borderRadius:10, padding:"9px 14px" }}>
+            <span style={{ fontSize:16 }}>💬</span>
+            <span style={{ fontSize:13, color:"#374151", fontWeight:700, fontFamily:"'M PLUS Rounded 1c',sans-serif" }}>LINEお友だちから <span style={{ background:"#fef9c3", padding:"1px 6px", borderRadius:4 }}>「代行」</span> と送ってください</span>
+          </div>
         </div>
 
         <button onClick={restart} style={{ width:"100%", maxWidth:540, padding:"12px", background:"#fff", color:accent, borderRadius:14, border:`2px solid ${accentBorder}`, fontSize:14, fontWeight:700, fontFamily:"'M PLUS Rounded 1c',sans-serif", cursor:"pointer" }}>🔄 もう一度診断する</button>
